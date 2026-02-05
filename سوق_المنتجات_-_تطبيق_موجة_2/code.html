@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html class="light" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>سوق المنتجات - تطبيق موجة</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f27f0d",
+                        "background-light": "#fcfaf8",
+                        "background-dark": "#221910",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom scrollbar for categories */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-[#1c140d] dark:text-white min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full flex-col max-w-[480px] mx-auto bg-background-light dark:bg-background-dark shadow-xl overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-50">
+<div class="text-[#1c140d] dark:text-white flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</div>
+<h2 class="text-[#1c140d] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">سوق المنتجات</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 bg-transparent text-[#1c140d] dark:text-white gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0 relative">
+<span class="material-symbols-outlined text-2xl">shopping_cart</span>
+<span class="absolute top-2 right-1 bg-primary text-white text-[10px] size-4 flex items-center justify-center rounded-full border-2 border-background-light dark:border-background-dark">٣</span>
+</button>
+</div>
+</div>
+<!-- Search Bar -->
+<div class="px-4 py-3">
+<label class="flex flex-col min-w-40 h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-xl h-full shadow-sm">
+<div class="text-primary flex border-none bg-white dark:bg-[#32281e] items-center justify-center pr-4 rounded-r-xl border-l-0">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#1c140d] dark:text-white focus:outline-0 focus:ring-0 border-none bg-white dark:bg-[#32281e] focus:border-none h-full placeholder:text-[#9c7349] px-4 rounded-r-none border-r-0 text-base font-normal leading-normal" placeholder="ابحث عن المنتجات..." value=""/>
+</div>
+</label>
+</div>
+<!-- Categories Tabs (Horizontal Scroll) -->
+<div class="pb-3 mt-2">
+<div class="flex overflow-x-auto no-scrollbar px-4 gap-6 scroll-smooth">
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-primary text-primary gap-2 pb-3 shrink-0" href="#">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-14 border-2 border-primary p-0.5 shadow-md" data-alt="Icon representing electronics category" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBrrUIh_FKnr1so6wSAXoCLxYKEpl2Jwe0hJM-APzruUmpMX5sf9cw1Pypy2lbQjci-30pA8BC30UYFM9o83s2lXS1uNT6JzraDO2kzpzsGjPETqflhnIyinVwl_XEzdoE2EzBMX3u_8gVhwn_hF7Xxo_0Nx-ey9uCtGaQOAbXcvN1G1dIs2DdwYxGaRzjDHFODBL07iOOQIQOSCvN_de1_SJLpgHHYQIXcZE_Ig2FkLJc0iMrGgvNEudvl3L2QzootINhoW7JNBJo-");'></div>
+<p class="text-sm font-bold leading-normal">إلكترونيات</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#9c7349] dark:text-gray-400 gap-2 pb-3 shrink-0" href="#">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-14 shadow-sm" data-alt="Icon representing fashion category" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBox6ThIx47I3RIOgYpa6vdEAbMsj8rLq7bdYpzUAN3YTpZHbkUxd7s84zUR0hR1SJQpWcMwajF-uJjXFZmnYg5S3jXgTwBcr5T2s6qsOI1OYGjHpwjjFfG4Wk0lxsW9nwpi5rns8ecvjYAsCUV_J0t26xdj0FJ4nqHD3K4Y0chv23zFoGj0eejSjdBczjYeswd7XOflCcaqqY_vUGAfC2Fuo1Kcug452OkwcMnMCgDVVWIX7FmvW64SA3Cfcd-UXDSHqpCjGYE585b");'></div>
+<p class="text-sm font-bold leading-normal">أزياء</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#9c7349] dark:text-gray-400 gap-2 pb-3 shrink-0" href="#">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-14 shadow-sm" data-alt="Icon representing home category" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC4CjKGwXvzTFjfIPlTj-r0dHw-gT9uNqMT3T3jId20SJCRjNgepHQKDGS6uB9ncbDm5seO2SXOQAhPQet63-rs78GkAo9UZQ8J-FLDzFTrWYQ_uHArlnhDdu5Ko7vTy45_r3yofCkl3pB3CGlRoJnNwy0JWiJzhn6m9u0q3glyJmErZ5YEpGEFrKC8PC36Y-vpD9r674AYwotJ6sihxVe3rfEVJw6GTje1lWUs58RVg_VbaT7WlvVAFsdPG715O0LNFpLFeFW82lXK");'></div>
+<p class="text-sm font-bold leading-normal">منزل</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#9c7349] dark:text-gray-400 gap-2 pb-3 shrink-0" href="#">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-14 shadow-sm" data-alt="Icon representing perfumes category" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDJuIRCqT35Xwl8rlL-Q3dL1-wN3jmzqmDAWFqilOUWIDcJ3YmEHG63U9w2IgKqtverg_edbEnA0Fxt9Xvhwq-o-4jIUUgXU8Awq5jJxlfzcF6eQtDW8FeBqgCtcMozN2-IZTzT2Z6LzzVQ6Io1qDSZMbTJ25WTsU24zCNfRh3dFMnRPNV-fE7VP7FehfVcXaUbW_qm7jcgIWJ80yFq9xkgrsHCYLQOz40y_mwbPKoH1B-PvGmSn2LVfRExRKgnRUpS6KjUAUZvdPoo");'></div>
+<p class="text-sm font-bold leading-normal">عطور</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#9c7349] dark:text-gray-400 gap-2 pb-3 shrink-0" href="#">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-14 shadow-sm" data-alt="Icon representing jewelry category" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCm4ETaxXnxD97KxCK7vrNfSYUzmzGMJ6p1ZUFJc4eKs4_SQRxJdTxqTkMqYeCiiukvOpt4S6iGr-YBZ3NuIVevcjvJosU5qQfaEAFV41X-lvhokMca8aWUcyyE9sDGkn3tUunJG39AVvc5X5D8zjDNj5hg86DLtXW7FxNfsFk6cV-Gbfzjy2E5QBZ7DPGlxInEqF-iRKIXX_f54VFtNcvYDp70AwS2tyDpD7JLIUZG_hkj-axkhC_OUqAHpbgDWY0SLVQgNCaluiY4");'></div>
+<p class="text-sm font-bold leading-normal">مجوهرات</p>
+</a>
+</div>
+</div>
+<!-- Segmented Control Toggle -->
+<div class="flex px-4 py-4">
+<div class="flex h-12 flex-1 items-center justify-center rounded-xl bg-white dark:bg-[#32281e] p-1.5 shadow-sm border border-orange-100 dark:border-orange-900/30">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-primary has-[:checked]:text-white text-[#9c7349] dark:text-gray-400 text-sm font-bold leading-normal transition-all duration-200">
+<span class="truncate">المميزة</span>
+<input checked="" class="invisible w-0" name="filter-toggle" type="radio" value="المميزة"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-primary has-[:checked]:text-white text-[#9c7349] dark:text-gray-400 text-sm font-bold leading-normal transition-all duration-200">
+<span class="truncate">الأحدث</span>
+<input class="invisible w-0" name="filter-toggle" type="radio" value="الأحدث"/>
+</label>
+</div>
+</div>
+<!-- Product Grid -->
+<div class="grid grid-cols-2 gap-4 p-4">
+<!-- Product Card 1 -->
+<div class="flex flex-col gap-3 pb-4 bg-white dark:bg-[#32281e] rounded-2xl p-2 shadow-md hover:shadow-lg transition-shadow">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl relative overflow-hidden group" data-alt="High quality smart watch" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAN9Q0vAQrxiGhwLqku7i4FCoP80Jgt-xE2AM47TppLe0cZvCXFDojmEznP8r7Pt1A5XazvWlQTXU6Pc0lBAHBXw-vwzfJAOxXzd0whNJl4pmdL_cYELPZOfeKTadr9xnKmhlx3EVZ2ae1eZJcQVQyM_gsZ2E-fU4G0nb_4JJHVbkd9UTHNcdK1d26sg_8_TgdOgkAfhWFPTieyKTxOJ4kTGATt_FZdvuC8Z1WNBjZQYQSX86NwSvANDx4qC1pbfUPcWB3trntnlc1l");'>
+<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm p-1 rounded-full text-primary flex items-center shadow-sm">
+<span class="material-symbols-outlined text-sm">favorite</span>
+</div>
+</div>
+<div class="px-1 flex flex-col flex-1">
+<p class="text-[#1c140d] dark:text-white text-base font-bold leading-tight">ساعة ذكية برو</p>
+<p class="text-primary text-sm font-bold mt-1">٥٠٠ ر.س</p>
+<button class="mt-3 w-full bg-primary text-white text-sm font-bold py-2.5 rounded-lg flex items-center justify-center gap-2 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+<span>أضف للسلة</span>
+</button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="flex flex-col gap-3 pb-4 bg-white dark:bg-[#32281e] rounded-2xl p-2 shadow-md hover:shadow-lg transition-shadow">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl relative overflow-hidden group" data-alt="High quality wireless headphones" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB2_3OUyDDD-Zy0CW_em8bG828FdFRMH4BueJfWALPSl_njCSywnxHk9DspRTNaRDroDW-KEWBXtEbGotfnISlG7XuhCUlynep_HUdl0YXGFWZQfKW8n73uk-4jdPiO93fK3HD02ICUt-mknfR88eejOLHmaqASak65KjbTkV-WOPG2nhlUJQuUXbNFd4bNZ7YM-JV33JCGYAlE7GxfTKIR45p_V44-CcqjHVrYI8jk9qvUFiHsVCU23ubCKSyvfCYmxdXocEzQEHJy");'>
+<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm p-1 rounded-full text-primary flex items-center shadow-sm">
+<span class="material-symbols-outlined text-sm">favorite</span>
+</div>
+</div>
+<div class="px-1 flex flex-col flex-1">
+<p class="text-[#1c140d] dark:text-white text-base font-bold leading-tight">سماعات لاسلكية</p>
+<p class="text-primary text-sm font-bold mt-1">٣٥٠ ر.س</p>
+<button class="mt-3 w-full bg-primary text-white text-sm font-bold py-2.5 rounded-lg flex items-center justify-center gap-2 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+<span>أضف للسلة</span>
+</button>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="flex flex-col gap-3 pb-4 bg-white dark:bg-[#32281e] rounded-2xl p-2 shadow-md hover:shadow-lg transition-shadow">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl relative overflow-hidden group" data-alt="Elegant luxury perfume bottle" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBPDQddCZVmTB21FqlrKESQ4SUaA3WifOyy6fqAqwaJYRMufKVjCPRd8m74mY9Mkrv_C3Qjo0PYg1vGTBQsvN-Ouikcja_Y2M6yilbbvIP-Rp1Yg4pCbp2yVEThGlz8fb8qW9fOIT9QXf164DrSi97CinlCYi2bSvyjmpNp-ABMDlyCXEOIudDn2SE-8BGRG_GcrxBF3B4zoHJ1m4idd2RTxlgdAeVIDkknVZTd8pSwyUaoQDyQets28veFqN5IaoO7Mnz5uSSDXa_B");'>
+<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm p-1 rounded-full text-primary flex items-center shadow-sm">
+<span class="material-symbols-outlined text-sm">favorite</span>
+</div>
+</div>
+<div class="px-1 flex flex-col flex-1">
+<p class="text-[#1c140d] dark:text-white text-base font-bold leading-tight">عطر ملكي فاخر</p>
+<p class="text-primary text-sm font-bold mt-1">٤٥٠ ر.س</p>
+<button class="mt-3 w-full bg-primary text-white text-sm font-bold py-2.5 rounded-lg flex items-center justify-center gap-2 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+<span>أضف للسلة</span>
+</button>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="flex flex-col gap-3 pb-4 bg-white dark:bg-[#32281e] rounded-2xl p-2 shadow-md hover:shadow-lg transition-shadow">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl relative overflow-hidden group" data-alt="Modern leather handbag" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCYq618NsyKEUGcTZ0cyhl1YesgiYs6Xg50R7YmDuAx2oimF7l_JWvp6aq2JQfeH2UXKGbdsYq7wjc6zdud4jjqdCz9ce0pXtfH2Ys6TvbWf43cwJnhDa63VXwb5SaLFuo6W6EZWcmb1J4RoT6wLSoD0fPJdPs_K6uM_O2ipIZ2o_Ls7QhkytQpZmU-pa3CBHECHk5AGPBdMje-tY4V0LZwP-mkab9w7uu4IXdtO8Z13BHRUiFwYBDnTsUnpmfWHrZ7memRdZEOX9NE");'>
+<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm p-1 rounded-full text-primary flex items-center shadow-sm">
+<span class="material-symbols-outlined text-sm">favorite</span>
+</div>
+</div>
+<div class="px-1 flex flex-col flex-1">
+<p class="text-[#1c140d] dark:text-white text-base font-bold leading-tight">حقيبة جلدية</p>
+<p class="text-primary text-sm font-bold mt-1">٦٠٠ ر.س</p>
+<button class="mt-3 w-full bg-primary text-white text-sm font-bold py-2.5 rounded-lg flex items-center justify-center gap-2 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+<span>أضف للسلة</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Bottom Navigation Bar (iOS Style) -->
+<div class="mt-auto bg-white/80 dark:bg-[#221910]/80 backdrop-blur-md border-t border-[#e8dbce] dark:border-gray-800 px-6 py-2 pb-6 flex justify-between items-center sticky bottom-0">
+<div class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined">storefront</span>
+<span class="text-[10px] font-bold">المتجر</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-[#9c7349] dark:text-gray-500">
+<span class="material-symbols-outlined">package_2</span>
+<span class="text-[10px] font-medium">طلباتي</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-[#9c7349] dark:text-gray-500">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">الرئيسية</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-[#9c7349] dark:text-gray-500">
+<span class="material-symbols-outlined">notifications</span>
+<span class="text-[10px] font-medium">تنبيهات</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-[#9c7349] dark:text-gray-500">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">حسابي</span>
+</div>
+</div>
+<div class="h-5 bg-transparent"></div>
+</div>
+</body></html>

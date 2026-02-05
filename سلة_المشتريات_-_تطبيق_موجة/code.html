@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html class="light" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>سلة المشتريات - تطبيق موجة</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f27f0d",
+                        "background-light": "#f8f7f5",
+                        "background-dark": "#221910",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-[#1c140d] dark:text-[#fcfaf8] min-h-screen flex flex-col">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+<div class="flex items-center p-4 pb-2 justify-between">
+<div class="flex size-12 items-center justify-start">
+<span class="material-symbols-outlined cursor-pointer">arrow_forward</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-tight flex-1 text-center">سلة المشتريات</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="text-primary text-sm font-bold leading-normal shrink-0">مسح الكل</button>
+</div>
+</div>
+</header>
+<!-- Scrollable Content Area -->
+<main class="flex-1 overflow-y-auto px-4 py-2">
+<!-- Product List Section -->
+<div class="space-y-1">
+<!-- ListItem 1: Perfume -->
+<div class="flex items-center gap-4 bg-white dark:bg-[#2d2218] rounded-xl px-4 min-h-[88px] py-3 justify-between shadow-sm mb-3">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-16" data-alt="Luxurious perfume bottle with elegant branding" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBwa5OqYLkrGTYDiAeMfAZ_nuEJ-1QpbZJK35HZPlvzkEH7Qvrlo_4Cc1tgWqAwxE1a1IzkzAHppgAgjgv6XqSx5vUykr-Zg9fgFukB-zIgoo3Cm5DQxwQbfYZtGsbGe-dBksJNRSBWY6vRVTNcF1bcWAEyc8AMQf8JNFEuSa5fWR1Lwcoz0zUMhCsngMbB4ZddR9W2uJnTlIJlDVAS6mEASH68joOoOANqvNoen5LeTF4yT46cU7pWPoGfN9xIqrjt6HqLZo3Mqbti");'></div>
+<div class="flex flex-col justify-center">
+<p class="font-bold text-base line-clamp-1">عطر موجة فاخر</p>
+<p class="text-primary text-sm font-bold font-display mt-0.5">75.000 TND</p>
+</div>
+</div>
+<div class="shrink-0">
+<div class="flex items-center gap-3 bg-background-light dark:bg-background-dark/50 p-1 rounded-full border border-gray-100 dark:border-gray-700">
+<button class="flex h-8 w-8 items-center justify-center rounded-full bg-white dark:bg-[#3d2f23] text-primary shadow-sm">
+<span class="material-symbols-outlined text-lg">remove</span>
+</button>
+<input class="w-6 p-0 text-center bg-transparent border-none font-display font-bold text-base focus:ring-0" readonly="" type="text" value="1"/>
+<button class="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-white shadow-sm">
+<span class="material-symbols-outlined text-lg">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- ListItem 2: Smart Watch -->
+<div class="flex items-center gap-4 bg-white dark:bg-[#2d2218] rounded-xl px-4 min-h-[88px] py-3 justify-between shadow-sm mb-3">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-16" data-alt="Modern minimalist smart watch on white background" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDl5WgZBvybw0IX6yXtAnhQMpoGMdVl7ux0VvOGcw1cAGoN_VIZ_cwFyHCVoDH0JZ6M_Ulh4gbt7obt8pTLzyrdZObn_MQFVhrVANYSGZGiyDyLvp5ukjCbTmvTwhbaHVTOla2EnA42D5cOHE3OX1zbpeeibRo-4VEsO39rvccafazZwKLYxN3JAJhRo1DxToWNrZKHQEXU9Y-Bn11LxJU5H1gmRj1PKGnmpMd3N6aBD-Jgbk2Lge7EqyhMtZbLjNuL1SZxVeSJIud-");'></div>
+<div class="flex flex-col justify-center">
+<p class="font-bold text-base line-clamp-1">ساعة يد ذكية</p>
+<p class="text-primary text-sm font-bold font-display mt-0.5">120.000 TND</p>
+</div>
+</div>
+<div class="shrink-0">
+<div class="flex items-center gap-3 bg-background-light dark:bg-background-dark/50 p-1 rounded-full border border-gray-100 dark:border-gray-700">
+<button class="flex h-8 w-8 items-center justify-center rounded-full bg-white dark:bg-[#3d2f23] text-primary shadow-sm">
+<span class="material-symbols-outlined text-lg">remove</span>
+</button>
+<input class="w-6 p-0 text-center bg-transparent border-none font-display font-bold text-base focus:ring-0" readonly="" type="text" value="2"/>
+<button class="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-white shadow-sm">
+<span class="material-symbols-outlined text-lg">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- ListItem 3: Leather Wallet -->
+<div class="flex items-center gap-4 bg-white dark:bg-[#2d2218] rounded-xl px-4 min-h-[88px] py-3 justify-between shadow-sm mb-3">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-16" data-alt="Premium brown leather wallet detail" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDV5nzcl3oCEh8IV5qU8ds2r_9zRMPdZVleb7CGMnNTnttEyJIpupZlX4c6qCi_VBsNV-zvhHpFmgf2v4em3Cu2jL5ntdoHhXNxr7H3K4Qe79gysipCarQrOBMh0ay3HrF8CYiScVMmG0ydF1mnlO5VnZuBZGJiVBT6CWTUAe44-6MbuwIBXUv__c_yz79mzW_i68xzHSc1qOtD7un0yjHfgilZiF3dhMUqhkU2e3zGTq7wF9LCkJKoFg4y2G3_n-zUYPjT40X_OQRe");'></div>
+<div class="flex flex-col justify-center">
+<p class="font-bold text-base line-clamp-1">محفظة جلدية فاخرة</p>
+<p class="text-primary text-sm font-bold font-display mt-0.5">45.000 TND</p>
+</div>
+</div>
+<div class="shrink-0">
+<div class="flex items-center gap-3 bg-background-light dark:bg-background-dark/50 p-1 rounded-full border border-gray-100 dark:border-gray-700">
+<button class="flex h-8 w-8 items-center justify-center rounded-full bg-white dark:bg-[#3d2f23] text-primary shadow-sm">
+<span class="material-symbols-outlined text-lg">remove</span>
+</button>
+<input class="w-6 p-0 text-center bg-transparent border-none font-display font-bold text-base focus:ring-0" readonly="" type="text" value="1"/>
+<button class="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-white shadow-sm">
+<span class="material-symbols-outlined text-lg">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Section Header for Summary -->
+<h3 class="text-lg font-bold leading-tight tracking-tight px-0 pb-4 pt-6">ملخص الطلب</h3>
+<!-- Description List for Pricing -->
+<div class="bg-white dark:bg-[#2d2218] rounded-xl p-4 shadow-sm space-y-3 mb-8">
+<div class="flex justify-between items-center">
+<p class="text-gray-500 dark:text-gray-400 text-sm font-medium">المجموع الفرعي</p>
+<p class="font-display font-bold text-sm">360.000 TND</p>
+</div>
+<div class="flex justify-between items-center">
+<p class="text-gray-500 dark:text-gray-400 text-sm font-medium">رسوم التوصيل</p>
+<p class="font-display font-bold text-sm text-green-600 dark:text-green-400">7.000 TND</p>
+</div>
+<div class="border-t border-gray-100 dark:border-gray-700 pt-3 flex justify-between items-center">
+<p class="font-bold text-base">الإجمالي</p>
+<p class="text-primary font-display font-bold text-lg">367.000 TND</p>
+</div>
+</div>
+</main>
+<!-- Bottom Action Area -->
+<footer class="p-4 pb-8 bg-white dark:bg-[#1c140d] border-t border-gray-200 dark:border-gray-800">
+<button class="w-full bg-primary hover:bg-orange-600 text-white font-bold py-4 rounded-xl shadow-lg transition-colors flex items-center justify-center gap-2">
+<span>إتمام الشراء</span>
+<span class="material-symbols-outlined">shopping_cart_checkout</span>
+</button>
+<div class="mt-4 flex justify-center items-center gap-2 opacity-50 text-xs">
+<span class="material-symbols-outlined text-sm">lock</span>
+<span>دفع آمن ومحمي بالكامل</span>
+</div>
+</footer>
+</body></html>

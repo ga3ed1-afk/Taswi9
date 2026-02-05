@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html class="light" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Noto+Sans+Arabic:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f27f0d",
+                        "background-light": "#f8f7f5",
+                        "background-dark": "#221910",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "Noto Sans Arabic", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', 'Noto Sans Arabic', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-[#1c140d] dark:text-white min-h-screen">
+<div class="max-w-md mx-auto min-h-screen flex flex-col relative pb-24">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-4 py-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="size-12 shrink-0 rounded-full bg-primary/10 flex items-center justify-center border-2 border-primary/20">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User profile picture of a person smiling" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAnIEDQjJvQK7SGceLKqazqEoOwri6wAW8TWfOKR_BO_XROMJSe1wQlZjS_9iYvolf2P14M73zC54t5X5Mpv8vQkHJJSMcYkBL0bZspMx62Hcz82WHor7lk4G436Z4p-6lnFrhW8vJ4dwORdGPo6Xe2d4mpTF3fZJRryHcQlOTlbgOi7ne_gr5wwNciV1HF4SjB7NvY4IkYP30bfPTLNZ1Ux-8mIOm8CokTmDkgC1pV_Y4iNCz0brTPFHI182iKch_O9EgLlaF3i9Dq");'>
+</div>
+</div>
+<div class="flex flex-col">
+<h2 class="text-sm font-medium text-gray-500 dark:text-gray-400 leading-tight">أهلاً بك،</h2>
+<p class="text-[#1c140d] dark:text-white text-lg font-bold leading-tight">أحمد علوي</p>
+</div>
+</div>
+<button class="flex size-12 cursor-pointer items-center justify-center rounded-full bg-white dark:bg-[#322820] shadow-sm border border-gray-100 dark:border-gray-800 text-[#1c140d] dark:text-white">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</header>
+<!-- SearchBar Section -->
+<div class="px-4 py-6">
+<div class="mb-4">
+<h1 class="text-2xl font-bold mb-1">أين طردك اليوم؟</h1>
+<p class="text-sm text-gray-500 dark:text-gray-400">تتبع مسار شحناتك في الوقت الفعلي</p>
+</div>
+<label class="flex flex-col w-full">
+<div class="flex w-full items-center rounded-full bg-white dark:bg-[#322820] shadow-md px-4 h-14 border border-transparent focus-within:border-primary transition-all">
+<span class="material-symbols-outlined text-primary mr-1">search</span>
+<input class="flex-1 bg-transparent border-none focus:ring-0 text-[#1c140d] dark:text-white placeholder:text-gray-400 px-3 text-base font-normal" placeholder="أدخل رقم التتبع (مثال: 12345)" value=""/>
+<button class="bg-primary text-white rounded-full px-5 py-2 text-sm font-bold transition-transform active:scale-95">
+                        تتبع
+                    </button>
+</div>
+</label>
+</div>
+<!-- Quick Action Grid (TextGrid style) -->
+<div class="grid grid-cols-3 gap-3 px-4 mb-6">
+<div class="flex flex-col gap-2 items-center justify-center rounded-2xl border border-gray-100 dark:border-gray-800 bg-white dark:bg-[#322820] p-4 shadow-sm transition-all hover:border-primary/50 group">
+<div class="size-12 rounded-full bg-primary/10 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">package_2</span>
+</div>
+<h2 class="text-xs font-bold text-center">أرسل طرد</h2>
+</div>
+<div class="flex flex-col gap-2 items-center justify-center rounded-2xl border border-gray-100 dark:border-gray-800 bg-white dark:bg-[#322820] p-4 shadow-sm transition-all hover:border-primary/50 group">
+<div class="size-12 rounded-full bg-primary/10 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">calculate</span>
+</div>
+<h2 class="text-xs font-bold text-center">الحاسبة</h2>
+</div>
+<div class="flex flex-col gap-2 items-center justify-center rounded-2xl border border-gray-100 dark:border-gray-800 bg-white dark:bg-[#322820] p-4 shadow-sm transition-all hover:border-primary/50 group">
+<div class="size-12 rounded-full bg-primary/10 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">storefront</span>
+</div>
+<h2 class="text-xs font-bold text-center">المتجر</h2>
+</div>
+</div>
+<!-- SectionHeader -->
+<div class="flex items-center justify-between px-4 pb-3 pt-4">
+<h2 class="text-[#1c140d] dark:text-white text-xl font-bold leading-tight tracking-tight">الشحنات الأخيرة</h2>
+<button class="text-primary text-sm font-bold">عرض الكل</button>
+</div>
+<!-- Shipment Cards -->
+<div class="flex flex-col gap-4 px-4">
+<!-- Card 1 -->
+<div class="flex flex-col gap-4 rounded-3xl bg-white dark:bg-[#322820] p-5 shadow-sm border border-gray-50 dark:border-gray-800">
+<div class="flex justify-between items-start">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="size-2 rounded-full bg-blue-500"></span>
+<p class="text-[#1c140d] dark:text-white text-base font-bold leading-tight">شحنة #TRK98765</p>
+</div>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal">تونس العاصمة ← سوسة</p>
+</div>
+<div class="bg-blue-50 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400 px-3 py-1 rounded-full text-xs font-bold">
+                        قيد التوصيل
+                    </div>
+</div>
+<div class="w-full bg-gray-100 dark:bg-gray-800 h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-2/3 rounded-full"></div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1">
+<span class="text-primary font-bold">12.500</span>
+<span class="text-xs text-gray-500">د.ت</span>
+</div>
+<button class="flex items-center gap-1 bg-background-light dark:bg-background-dark/50 text-[#1c140d] dark:text-white px-4 py-2 rounded-full text-sm font-medium border border-gray-100 dark:border-gray-800">
+<span>التفاصيل</span>
+<span class="material-symbols-outlined text-sm">arrow_back_ios</span>
+</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="flex flex-col gap-4 rounded-3xl bg-white dark:bg-[#322820] p-5 shadow-sm border border-gray-50 dark:border-gray-800 opacity-80">
+<div class="flex justify-between items-start">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="size-2 rounded-full bg-green-500"></span>
+<p class="text-[#1c140d] dark:text-white text-base font-bold leading-tight">شحنة #TRK22410</p>
+</div>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal">صفاقس ← بنزرت</p>
+</div>
+<div class="bg-green-50 dark:bg-green-500/10 text-green-600 dark:text-green-400 px-3 py-1 rounded-full text-xs font-bold">
+                        تم التسليم
+                    </div>
+</div>
+<div class="w-full bg-gray-100 dark:bg-gray-800 h-2 rounded-full overflow-hidden">
+<div class="bg-green-500 h-full w-full rounded-full"></div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1">
+<span class="text-primary font-bold">8.000</span>
+<span class="text-xs text-gray-500">د.ت</span>
+</div>
+<button class="flex items-center gap-1 bg-background-light dark:bg-background-dark/50 text-[#1c140d] dark:text-white px-4 py-2 rounded-full text-sm font-medium border border-gray-100 dark:border-gray-800">
+<span>التفاصيل</span>
+<span class="material-symbols-outlined text-sm">arrow_back_ios</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Promo Banner (Custom Component) -->
+<div class="p-4 mt-2">
+<div class="relative overflow-hidden rounded-3xl bg-primary p-6 text-white shadow-lg">
+<div class="relative z-10 flex flex-col gap-2">
+<h3 class="text-xl font-bold">خصم 20% على شحنتك الأولى!</h3>
+<p class="text-sm text-white/90">استخدم الرمز: <span class="font-bold">MOUJA24</span></p>
+<button class="mt-2 bg-white text-primary w-fit px-6 py-2 rounded-full text-sm font-bold shadow-sm">اطلب الآن</button>
+</div>
+<span class="material-symbols-outlined absolute -bottom-6 -left-6 text-[120px] opacity-10 rotate-12">local_shipping</span>
+</div>
+</div>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 max-w-md mx-auto bg-white/95 dark:bg-[#221910]/95 backdrop-blur-md border-t border-gray-100 dark:border-gray-800 h-20 px-8 flex items-center justify-between z-[100]">
+<div class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined fill-1">home</span>
+<span class="text-[10px] font-bold">الرئيسية</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-gray-400">
+<span class="material-symbols-outlined">inventory_2</span>
+<span class="text-[10px] font-bold">شحناتي</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-gray-400">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+<span class="text-[10px] font-bold">المحفظة</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-gray-400">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold">الحساب</span>
+</div>
+</nav>
+</div>
+</body></html>

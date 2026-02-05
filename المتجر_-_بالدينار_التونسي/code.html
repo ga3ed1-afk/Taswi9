@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<html class="light" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>المتجر - موجة إكسبريس</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f27f0d",
+                        "background-light": "#f8f7f5",
+                        "background-dark": "#221910",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        /* Custom scrollbar hiding for categories */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#1c140d] dark:text-white antialiased">
+<!-- Main Container (Phone Mockup) -->
+<div class="relative flex h-screen w-full max-w-[480px] mx-auto flex-col overflow-hidden bg-background-light dark:bg-background-dark shadow-2xl">
+<!-- Status Bar Space (iOS style) -->
+<div class="h-11 w-full bg-background-light dark:bg-background-dark"></div>
+<!-- TopAppBar -->
+<div class="sticky top-0 z-20 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md px-4 py-2 flex items-center justify-between border-b border-gray-100 dark:border-white/10">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1">shopping_cart</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight">المتجر</h1>
+</div>
+<div class="flex gap-2">
+<button class="size-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-[#1c140d] dark:text-white">search</span>
+</button>
+<button class="size-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 transition-colors relative">
+<span class="material-symbols-outlined text-[#1c140d] dark:text-white">notifications</span>
+<span class="absolute top-2 right-2 size-2 bg-primary rounded-full border-2 border-white dark:border-background-dark"></span>
+</button>
+</div>
+</div>
+<!-- Scrollable Content Area -->
+<div class="flex-1 overflow-y-auto no-scrollbar pb-24">
+<!-- Category Chips -->
+<div class="flex gap-3 px-4 py-4 overflow-x-auto no-scrollbar">
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-primary px-4 text-white shadow-sm shadow-primary/20">
+<span class="material-symbols-outlined text-[20px]">grid_view</span>
+<p class="text-sm font-semibold">الكل</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-white dark:bg-white/5 border border-gray-100 dark:border-white/10 px-4 text-[#1c140d] dark:text-white shadow-sm">
+<span class="material-symbols-outlined text-[20px]">smartphone</span>
+<p class="text-sm font-medium">إلكترونيات</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-white dark:bg-white/5 border border-gray-100 dark:border-white/10 px-4 text-[#1c140d] dark:text-white shadow-sm">
+<span class="material-symbols-outlined text-[20px]">restaurant</span>
+<p class="text-sm font-medium">طعام</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-white dark:bg-white/5 border border-gray-100 dark:border-white/10 px-4 text-[#1c140d] dark:text-white shadow-sm">
+<span class="material-symbols-outlined text-[20px]">apparel</span>
+<p class="text-sm font-medium">أزياء</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-white dark:bg-white/5 border border-gray-100 dark:border-white/10 px-4 text-[#1c140d] dark:text-white shadow-sm">
+<span class="material-symbols-outlined text-[20px]">home</span>
+<p class="text-sm font-medium">منزل</p>
+</div>
+</div>
+<!-- SectionHeader -->
+<div class="flex items-center justify-between px-4 pb-2 pt-2">
+<h3 class="text-lg font-bold leading-tight tracking-[-0.015em]">المنتجات الشائعة</h3>
+<button class="text-sm font-semibold text-primary">عرض الكل</button>
+</div>
+<!-- ImageGrid / Product Grid -->
+<div class="grid grid-cols-2 gap-4 p-4">
+<!-- Product Card 1 -->
+<div class="group flex flex-col bg-white dark:bg-white/5 rounded-2xl overflow-hidden border border-gray-100 dark:border-white/10 shadow-sm transition-transform active:scale-[0.98]">
+<div class="relative w-full aspect-square bg-center bg-no-repeat bg-cover" data-alt="Modern smartwatch with black band on minimalist background" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCR5-4Dbr_PU7w4q7Dwg0kjWaIo6ZUEapllRed7U77JSTyRn1swc8gOuvtVOYOWk409uytZ0SF3PY9jdoEbOnYvYEzHK5h_IC1vArMf4K-uvXdqiruENz-tuyhmFsxig2qI8g72XoJzH-Z0HxDjwsofJooGthGAINuZZANgo4NeD9pipWSze5oxeNx-ym3fx5K3soIRXoT2jdTxmtx49IFH4w4ma6_1Ujaw868H1vYKic_Ty7YxCtOLXJ83agZ4EOH2e7cBe7AchGqW");'>
+<button class="absolute top-2 left-2 size-8 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center text-gray-800">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="p-3 flex flex-col flex-1">
+<p class="text-[#1c140d] dark:text-white text-sm font-bold leading-tight mb-1">ساعة ذكية فاخرة</p>
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-yellow-400 text-[14px]" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="text-[11px] font-bold text-gray-500">4.9</span>
+</div>
+<div class="mt-auto flex items-center justify-between gap-2">
+<p class="text-primary text-base font-bold leading-normal">249.000 <span class="text-[10px] font-normal">د.ت</span></p>
+<button class="size-9 rounded-xl bg-primary flex items-center justify-center text-white shadow-lg shadow-primary/30 active:bg-orange-600 transition-colors">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group flex flex-col bg-white dark:bg-white/5 rounded-2xl overflow-hidden border border-gray-100 dark:border-white/10 shadow-sm transition-transform active:scale-[0.98]">
+<div class="relative w-full aspect-square bg-center bg-no-repeat bg-cover" data-alt="Premium wireless headphones over ear professional style" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBygj2UOtDmYO6DL75QI0qIjr5OTGWBepSOdzVxekHFS8Qd4dzgsrbqwylWcp4qVErcsjeerzo2UdwIjKqIZdk6agoxlUDjdneA5nYkmsDijG9NPc6D6iZdwmOhGDnaFeSSpKH3_IngYgp1Pd-sIkyI3_M0-0rkhu3QtAb1LDu2TRrmnK7WgWNIA6rAYzu-B2GxExCLCgB63JSn7-BdPLEZqFyMiG9beOW8uKDh43Kfk1Fql9Uz6Kj5AH9vjCrgWOGD6CMkAmeRdwbL");'>
+<button class="absolute top-2 left-2 size-8 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center text-gray-800">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="p-3 flex flex-col flex-1">
+<p class="text-[#1c140d] dark:text-white text-sm font-bold leading-tight mb-1">سماعات لاسلكية برو</p>
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-yellow-400 text-[14px]" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="text-[11px] font-bold text-gray-500">4.8</span>
+</div>
+<div class="mt-auto flex items-center justify-between gap-2">
+<p class="text-primary text-base font-bold leading-normal">385.000 <span class="text-[10px] font-normal">د.ت</span></p>
+<button class="size-9 rounded-xl bg-primary flex items-center justify-center text-white shadow-lg shadow-primary/30 active:bg-orange-600 transition-colors">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group flex flex-col bg-white dark:bg-white/5 rounded-2xl overflow-hidden border border-gray-100 dark:border-white/10 shadow-sm transition-transform active:scale-[0.98]">
+<div class="relative w-full aspect-square bg-center bg-no-repeat bg-cover" data-alt="Elegant quartz watch with white dial and metal band" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDSclDRXFqy1fHD1gh9Q8PvOsuTMxPOQfvFz30hfm7znCJWE26JtHCYWVgnTZMjG13VfcFMDJOQFlVjr9-9D0n8PlLur-DsCNFgRj-lS_zw9k6Tae80az091IAG00ojXvT0v5ORNe9fT54GxPjgMFCITSeWUaLmrkq7AkoUU_R0boBoRpyjFKE-jyd7or9riBZMmMJxhsunUP16GV-YNW7qzCw36HOhPPXnedGFt1oMD-cZPBhsewzGGwWsg-5MWRmEKLNCIVsvLf9M");'>
+<button class="absolute top-2 left-2 size-8 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center text-gray-800">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="p-3 flex flex-col flex-1">
+<p class="text-[#1c140d] dark:text-white text-sm font-bold leading-tight mb-1">ساعة يد كلاسيكية</p>
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-yellow-400 text-[14px]" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="text-[11px] font-bold text-gray-500">4.7</span>
+</div>
+<div class="mt-auto flex items-center justify-between gap-2">
+<p class="text-primary text-base font-bold leading-normal">120.000 <span class="text-[10px] font-normal">د.ت</span></p>
+<button class="size-9 rounded-xl bg-primary flex items-center justify-center text-white shadow-lg shadow-primary/30 active:bg-orange-600 transition-colors">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group flex flex-col bg-white dark:bg-white/5 rounded-2xl overflow-hidden border border-gray-100 dark:border-white/10 shadow-sm transition-transform active:scale-[0.98]">
+<div class="relative w-full aspect-square bg-center bg-no-repeat bg-cover" data-alt="Retro polaroid camera on bright colored background" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB0XSmp2Bp8IVmUgDcwQukXse9aGQD9R9DIcFP5KdjC_0mPGkayfuMOL3A5thKKzmJXV6BKkrqoNnkzpgb9r1OP-wdtruCnW3fFkosbor59C2Y58QAGZbKwP0fkk46V0c5rSl175Oc4R80ZSiqql3uyJyx3_1X3LRok2oSygSrgHZujRExvE9YFm0vtSwXVrJw0hoWi0GUARKSVkcx-F4JgvH5b7PUZDbLA1Ofs8NBQJem5wX6pNs5ME3PfiQiR8R9WtTPIA_1QTtu3");'>
+<button class="absolute top-2 left-2 size-8 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center text-gray-800">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="p-3 flex flex-col flex-1">
+<p class="text-[#1c140d] dark:text-white text-sm font-bold leading-tight mb-1">كاميرا تصوير فوري</p>
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-yellow-400 text-[14px]" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="text-[11px] font-bold text-gray-500">4.9</span>
+</div>
+<div class="mt-auto flex items-center justify-between gap-2">
+<p class="text-primary text-base font-bold leading-normal">450.000 <span class="text-[10px] font-normal">د.ت</span></p>
+<button class="size-9 rounded-xl bg-primary flex items-center justify-center text-white shadow-lg shadow-primary/30 active:bg-orange-600 transition-colors">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Newsletter or Banner (Consistency Component) -->
+<div class="px-4 py-2">
+<div class="bg-primary/10 rounded-2xl p-6 border border-primary/20 flex flex-col gap-3">
+<h4 class="text-primary text-lg font-bold">خصم خاص لفترة محدودة!</h4>
+<p class="text-primary/80 text-sm">احصل على توصيل مجاني لأول 3 طلبات فوق 50.000 د.ت</p>
+<button class="bg-primary text-white font-bold py-3 rounded-xl mt-2 text-sm">استخدم الكود: MOUJA</button>
+</div>
+</div>
+</div>
+<!-- BottomNavBar (iOS Floating Style) -->
+<div class="absolute bottom-6 left-4 right-4 z-30">
+<div class="bg-white/90 dark:bg-[#2c221a]/95 backdrop-blur-lg flex items-center justify-around px-2 py-3 rounded-[2rem] shadow-2xl border border-gray-100 dark:border-white/10">
+<a class="flex flex-1 flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined text-[26px]" style="font-variation-settings: 'FILL' 1">home</span>
+<p class="text-[10px] font-bold">الرئيسية</p>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 text-gray-400 dark:text-gray-500" href="#">
+<span class="material-symbols-outlined text-[26px]">grid_view</span>
+<p class="text-[10px] font-medium">الفئات</p>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 text-gray-400 dark:text-gray-500" href="#">
+<span class="material-symbols-outlined text-[26px]">receipt_long</span>
+<p class="text-[10px] font-medium">طلباتي</p>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 text-gray-400 dark:text-gray-500" href="#">
+<span class="material-symbols-outlined text-[26px]">person</span>
+<p class="text-[10px] font-medium">حسابي</p>
+</a>
+</div>
+</div>
+<!-- iOS Home Indicator -->
+<div class="absolute bottom-1 left-1/2 -translate-x-1/2 w-32 h-1.5 bg-black/10 dark:bg-white/10 rounded-full z-40"></div>
+</div>
+</body></html>

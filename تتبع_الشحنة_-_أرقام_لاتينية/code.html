@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html class="light" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>تتبع الشحنة - موجة إكسبريس</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f27f0d",
+                        "background-light": "#f8f7f5",
+                        "background-dark": "#221910",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-status .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen text-[#1c140d] dark:text-[#fcfaf8]">
+<!-- Top Navigation Bar -->
+<div class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-[#e8dbce] dark:border-[#3d2e1f]">
+<div class="flex items-center p-4 justify-between max-w-md mx-auto">
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-[#f4ede7] dark:hover:bg-[#3d2e1f] transition-colors">
+<span class="material-symbols-outlined text-2xl">arrow_forward</span>
+</button>
+<h1 class="text-lg font-bold leading-tight tracking-tight flex-1 text-center font-display">تتبع الشحنة</h1>
+<div class="size-10"></div> <!-- Spacer for symmetry -->
+</div>
+</div>
+<main class="max-w-md mx-auto pb-32">
+<!-- Shipment Summary Card -->
+<div class="p-4">
+<div class="flex flex-col gap-4 rounded-xl bg-white dark:bg-[#2d2218] p-5 shadow-sm border border-[#e8dbce] dark:border-[#3d2e1f]">
+<div class="flex justify-between items-start">
+<div class="flex flex-col gap-1">
+<span class="text-[#9c7349] dark:text-[#c4a68a] text-xs font-semibold uppercase tracking-wider">رقم التتبع</span>
+<p class="text-[#1c140d] dark:text-white text-xl font-bold font-display">ME-82931</p>
+</div>
+<div class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold">
+                        في الطريق
+                    </div>
+</div>
+<div class="h-px bg-[#e8dbce] dark:bg-[#3d2e1f] w-full"></div>
+<div class="flex items-center gap-3">
+<div class="size-12 rounded-lg bg-cover bg-center shrink-0 shadow-inner" data-alt="Abstract product package placeholder" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAglFv66C_RRBa0M77w4bBZDeynolrVQqx0H94hUOa5dtXYtnk8ka26xmy6xNFFouER7qnfkfUlTAIQlANB_d_0R56VRtm87_nbTppkOcJF93NIrNIX40xJ0r0CNbXz7JZH1Ei4yGhjr8L9VmexpidDa4cDklqmv3UuluR08L70rRQ9cTDQCxCE6YCi6oRPegUcdgP0t1KYGxfCLDp_fz-tkCd5Trp-C6umgRrdlxZAW3G2VHKSaOQ6NKnUu5_vK7cD_qZ_0Wy8qLi6");'></div>
+<div class="flex flex-col">
+<p class="text-sm font-bold text-[#1c140d] dark:text-white leading-snug">صندوق الهدايا الفاخر - مجموعة الخريف</p>
+<p class="text-xs text-[#9c7349] dark:text-[#c4a68a]">توصيل خلال: 15 أكتوبر 2023</p>
+</div>
+</div>
+<button class="flex w-full cursor-pointer items-center justify-center gap-2 rounded-lg h-10 bg-primary/10 hover:bg-primary/20 text-primary transition-colors text-sm font-bold">
+<span class="material-symbols-outlined text-[18px]">share</span>
+<span>مشاركة حالة الطلب</span>
+</button>
+</div>
+</div>
+<!-- Section: Tracking Timeline -->
+<div class="px-4 py-2">
+<h3 class="text-lg font-bold mb-4 px-1">حالة الشحنة</h3>
+<div class="grid grid-cols-[40px_1fr] gap-x-3 px-1">
+<!-- Status 4: Delivered (Pending) -->
+<div class="flex flex-col items-center gap-1 pt-1">
+<div class="size-8 rounded-full border-2 border-[#e8dbce] dark:border-[#3d2e1f] flex items-center justify-center text-[#e8dbce] dark:text-[#3d2e1f]">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+</div>
+<div class="w-[2px] bg-[#e8dbce] dark:bg-[#3d2e1f] h-12"></div>
+</div>
+<div class="flex flex-col pb-8 opacity-40">
+<p class="text-[#1c140d] dark:text-white text-base font-bold">تم التوصيل</p>
+<p class="text-[#9c7349] dark:text-[#c4a68a] text-sm">الوقت المتوقع: 15 أكتوبر 2023</p>
+</div>
+<!-- Status 3: In Transit (Active) -->
+<div class="flex flex-col items-center gap-1">
+<div class="size-10 rounded-full bg-primary flex items-center justify-center text-white shadow-lg shadow-primary/30 ring-4 ring-primary/20 z-10 active-status">
+<span class="material-symbols-outlined text-[24px]">local_shipping</span>
+</div>
+<div class="w-[2px] bg-primary h-14"></div>
+</div>
+<div class="flex flex-col pb-10">
+<div class="flex items-center gap-2">
+<p class="text-primary text-base font-bold">في الطريق إلى الوجهة</p>
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+</div>
+<p class="text-[#9c7349] dark:text-[#c4a68a] text-sm font-display">اليوم - 08:15 AM</p>
+<div class="mt-2 p-3 bg-white dark:bg-[#2d2218] rounded-lg border border-[#e8dbce] dark:border-[#3d2e1f] flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span class="text-xs text-[#1c140d] dark:text-white">مركز التوزيع - تونس العاصمة</span>
+</div>
+</div>
+<!-- Status 2: Prepared -->
+<div class="flex flex-col items-center gap-1">
+<div class="size-8 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">inventory_2</span>
+</div>
+<div class="w-[2px] bg-primary h-12"></div>
+</div>
+<div class="flex flex-col pb-8">
+<p class="text-[#1c140d] dark:text-white text-base font-medium">تم تجهيز الشحنة</p>
+<p class="text-[#9c7349] dark:text-[#c4a68a] text-sm font-display">14 أكتوبر 2023 - 09:30 PM</p>
+</div>
+<!-- Status 1: Order Received -->
+<div class="flex flex-col items-center gap-1">
+<div class="size-8 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">receipt_long</span>
+</div>
+</div>
+<div class="flex flex-col">
+<p class="text-[#1c140d] dark:text-white text-base font-medium">تم استلام الطلب</p>
+<p class="text-[#9c7349] dark:text-[#c4a68a] text-sm font-display">13 أكتوبر 2023 - 11:20 AM</p>
+</div>
+</div>
+</div>
+<!-- Action Panel: Courier Info -->
+<div class="fixed bottom-0 left-0 right-0 p-4 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-xl border-t border-[#e8dbce] dark:border-[#3d2e1f]">
+<div class="max-w-md mx-auto">
+<div class="flex items-center justify-between gap-4 rounded-xl border border-primary/20 bg-white dark:bg-[#2d2218] p-4 shadow-xl">
+<div class="flex items-center gap-3">
+<div class="size-12 rounded-full bg-cover bg-center border-2 border-primary/10" data-alt="Courier profile photo portrait" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBkNLS-bTI8yRbvMlPnNL_HeLZlv3dAbexHadW8w5Y2vYX9V8cWLYWWY9o1qNHB9H5BdKu86KnLSI_4H00rLlKPcKA-6hlAGM88HKsPHvz4nCxwaIX4zgvS0dBL9kYMUBEHkWD683p3IHkRiEkuK5f7bWUN5N30GIBaDYY4xFv3xO2A4OskJywjtSRiZBLE9tpFu7UANb5DSlqXLco1dCL8NEl5ubVWylc7lo5QvV240y0E9TQpiV6IJXD--DLXIw3ywrJzHPnQo36G");'></div>
+<div class="flex flex-col">
+<p class="text-[#1c140d] dark:text-white text-sm font-bold">أحمد علي</p>
+<p class="text-[#9c7349] dark:text-[#c4a68a] text-xs font-display">تويوتا هيلوكس (123 تونس)</p>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="flex size-10 items-center justify-center rounded-full bg-[#f4ede7] dark:bg-[#3d2e1f] text-primary hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">chat</span>
+</button>
+<button class="flex h-10 px-4 items-center justify-center rounded-full bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined mr-[-4px] ml-2 text-[18px]">call</span>
+<span>اتصال</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Map Preview Placeholder (Optional high-end touch) -->
+<div class="p-4 pt-0 mb-4 max-w-md mx-auto">
+<div class="relative w-full aspect-[16/9] rounded-xl overflow-hidden border border-[#e8dbce] dark:border-[#3d2e1f] shadow-sm">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Simplified map view showing courier location in Tunis" data-location="Tunis" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD9Y4cdI4rE2-TEHsZXygI63JE9xltQTe5Q0URS4rzFBWoZ2cYROq689U-xVhtXl2fySKNHnlATtResNiEDuQdht4Z3mRdvjH025fy7TzTlrGnmtabmXWVPJ0Fms41L15hrr7s-Q6A93VgI5mZDIGg_5vrkeY49LOdz2n12r0NiPNgKWjZ2kHGzjHzIEx6BqbDzeBrzorPZqaRxoJQBQndBxHf7wInE4kTkCz1TKQH0ViD45c8qMAtCQbjajgiulvgbo8JFuTEH_mUK");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+<div class="absolute bottom-3 right-3 bg-white/90 dark:bg-[#1c140d]/90 backdrop-blur px-2 py-1 rounded text-[10px] font-bold shadow-sm">
+                عرض الخريطة بالكامل
+            </div>
+</div>
+</div>
+</body></html>
