@@ -1,158 +1,111 @@
 <!DOCTYPE html>
-
-<html class="light" dir="rtl" lang="ar"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>سلة المشتريات - تطبيق موجة</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#f27f0d",
-                        "background-light": "#f8f7f5",
-                        "background-dark": "#221910",
-                    },
-                    fontFamily: {
-                        "display": ["Plus Jakarta Sans", "sans-serif"]
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                },
+<html lang="ar" dir="rtl" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الطلبات | Xintra</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,500,0,0" />
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              side:'#0f1118', nav:'#12141c', panel:'#11141d', stroke:'#2b3040',
+              muted:'#99a2b4', primary:'#6568f6', danger:'#ff4d79', success:'#11d7a5', warning:'#f7b731'
             },
+            fontFamily: { sans: ['Tajawal', 'sans-serif'] }
+          }
         }
+      }
     </script>
-<style>
-        body {
-            font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;
-        }
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
+    <style>
+      body{font-family:'Tajawal',sans-serif;background:#1b1e28}
+      .field{background:#0f131c;border:1px solid #2b3040;color:#e8ebf5}
+      .field:focus{outline:none;border-color:#6568f6;box-shadow:0 0 0 1px #6568f6}
+      ::-webkit-scrollbar{height:8px;width:8px}
+      ::-webkit-scrollbar-thumb{background:#2f3547;border-radius:999px}
     </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
   </head>
-<body class="bg-background-light dark:bg-background-dark text-[#1c140d] dark:text-[#fcfaf8] min-h-screen flex flex-col">
-<!-- Top Navigation Bar -->
-<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
-<div class="flex items-center p-4 pb-2 justify-between">
-<div class="flex size-12 items-center justify-start">
-<span class="material-symbols-outlined cursor-pointer">arrow_forward</span>
-</div>
-<h2 class="text-lg font-bold leading-tight tracking-tight flex-1 text-center">سلة المشتريات</h2>
-<div class="flex w-12 items-center justify-end">
-<button class="text-primary text-sm font-bold leading-normal shrink-0">مسح الكل</button>
-</div>
-</div>
-</header>
-<!-- Scrollable Content Area -->
-<main class="flex-1 overflow-y-auto px-4 py-2">
-<!-- Product List Section -->
-<div class="space-y-1">
-<!-- ListItem 1: Perfume -->
-<div class="flex items-center gap-4 bg-white dark:bg-[#2d2218] rounded-xl px-4 min-h-[88px] py-3 justify-between shadow-sm mb-3">
-<div class="flex items-center gap-4">
-<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-16" data-alt="Luxurious perfume bottle with elegant branding" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBwa5OqYLkrGTYDiAeMfAZ_nuEJ-1QpbZJK35HZPlvzkEH7Qvrlo_4Cc1tgWqAwxE1a1IzkzAHppgAgjgv6XqSx5vUykr-Zg9fgFukB-zIgoo3Cm5DQxwQbfYZtGsbGe-dBksJNRSBWY6vRVTNcF1bcWAEyc8AMQf8JNFEuSa5fWR1Lwcoz0zUMhCsngMbB4ZddR9W2uJnTlIJlDVAS6mEASH68joOoOANqvNoen5LeTF4yT46cU7pWPoGfN9xIqrjt6HqLZo3Mqbti");'></div>
-<div class="flex flex-col justify-center">
-<p class="font-bold text-base line-clamp-1">عطر موجة فاخر</p>
-<p class="text-primary text-sm font-bold font-display mt-0.5">75.000 TND</p>
-</div>
-</div>
-<div class="shrink-0">
-<div class="flex items-center gap-3 bg-background-light dark:bg-background-dark/50 p-1 rounded-full border border-gray-100 dark:border-gray-700">
-<button class="flex h-8 w-8 items-center justify-center rounded-full bg-white dark:bg-[#3d2f23] text-primary shadow-sm">
-<span class="material-symbols-outlined text-lg">remove</span>
-</button>
-<input class="w-6 p-0 text-center bg-transparent border-none font-display font-bold text-base focus:ring-0" readonly="" type="text" value="1"/>
-<button class="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-white shadow-sm">
-<span class="material-symbols-outlined text-lg">add</span>
-</button>
-</div>
-</div>
-</div>
-<!-- ListItem 2: Smart Watch -->
-<div class="flex items-center gap-4 bg-white dark:bg-[#2d2218] rounded-xl px-4 min-h-[88px] py-3 justify-between shadow-sm mb-3">
-<div class="flex items-center gap-4">
-<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-16" data-alt="Modern minimalist smart watch on white background" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDl5WgZBvybw0IX6yXtAnhQMpoGMdVl7ux0VvOGcw1cAGoN_VIZ_cwFyHCVoDH0JZ6M_Ulh4gbt7obt8pTLzyrdZObn_MQFVhrVANYSGZGiyDyLvp5ukjCbTmvTwhbaHVTOla2EnA42D5cOHE3OX1zbpeeibRo-4VEsO39rvccafazZwKLYxN3JAJhRo1DxToWNrZKHQEXU9Y-Bn11LxJU5H1gmRj1PKGnmpMd3N6aBD-Jgbk2Lge7EqyhMtZbLjNuL1SZxVeSJIud-");'></div>
-<div class="flex flex-col justify-center">
-<p class="font-bold text-base line-clamp-1">ساعة يد ذكية</p>
-<p class="text-primary text-sm font-bold font-display mt-0.5">120.000 TND</p>
-</div>
-</div>
-<div class="shrink-0">
-<div class="flex items-center gap-3 bg-background-light dark:bg-background-dark/50 p-1 rounded-full border border-gray-100 dark:border-gray-700">
-<button class="flex h-8 w-8 items-center justify-center rounded-full bg-white dark:bg-[#3d2f23] text-primary shadow-sm">
-<span class="material-symbols-outlined text-lg">remove</span>
-</button>
-<input class="w-6 p-0 text-center bg-transparent border-none font-display font-bold text-base focus:ring-0" readonly="" type="text" value="2"/>
-<button class="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-white shadow-sm">
-<span class="material-symbols-outlined text-lg">add</span>
-</button>
-</div>
-</div>
-</div>
-<!-- ListItem 3: Leather Wallet -->
-<div class="flex items-center gap-4 bg-white dark:bg-[#2d2218] rounded-xl px-4 min-h-[88px] py-3 justify-between shadow-sm mb-3">
-<div class="flex items-center gap-4">
-<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-16" data-alt="Premium brown leather wallet detail" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDV5nzcl3oCEh8IV5qU8ds2r_9zRMPdZVleb7CGMnNTnttEyJIpupZlX4c6qCi_VBsNV-zvhHpFmgf2v4em3Cu2jL5ntdoHhXNxr7H3K4Qe79gysipCarQrOBMh0ay3HrF8CYiScVMmG0ydF1mnlO5VnZuBZGJiVBT6CWTUAe44-6MbuwIBXUv__c_yz79mzW_i68xzHSc1qOtD7un0yjHfgilZiF3dhMUqhkU2e3zGTq7wF9LCkJKoFg4y2G3_n-zUYPjT40X_OQRe");'></div>
-<div class="flex flex-col justify-center">
-<p class="font-bold text-base line-clamp-1">محفظة جلدية فاخرة</p>
-<p class="text-primary text-sm font-bold font-display mt-0.5">45.000 TND</p>
-</div>
-</div>
-<div class="shrink-0">
-<div class="flex items-center gap-3 bg-background-light dark:bg-background-dark/50 p-1 rounded-full border border-gray-100 dark:border-gray-700">
-<button class="flex h-8 w-8 items-center justify-center rounded-full bg-white dark:bg-[#3d2f23] text-primary shadow-sm">
-<span class="material-symbols-outlined text-lg">remove</span>
-</button>
-<input class="w-6 p-0 text-center bg-transparent border-none font-display font-bold text-base focus:ring-0" readonly="" type="text" value="1"/>
-<button class="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-white shadow-sm">
-<span class="material-symbols-outlined text-lg">add</span>
-</button>
-</div>
-</div>
-</div>
-</div>
-<!-- Section Header for Summary -->
-<h3 class="text-lg font-bold leading-tight tracking-tight px-0 pb-4 pt-6">ملخص الطلب</h3>
-<!-- Description List for Pricing -->
-<div class="bg-white dark:bg-[#2d2218] rounded-xl p-4 shadow-sm space-y-3 mb-8">
-<div class="flex justify-between items-center">
-<p class="text-gray-500 dark:text-gray-400 text-sm font-medium">المجموع الفرعي</p>
-<p class="font-display font-bold text-sm">360.000 TND</p>
-</div>
-<div class="flex justify-between items-center">
-<p class="text-gray-500 dark:text-gray-400 text-sm font-medium">رسوم التوصيل</p>
-<p class="font-display font-bold text-sm text-green-600 dark:text-green-400">7.000 TND</p>
-</div>
-<div class="border-t border-gray-100 dark:border-gray-700 pt-3 flex justify-between items-center">
-<p class="font-bold text-base">الإجمالي</p>
-<p class="text-primary font-display font-bold text-lg">367.000 TND</p>
-</div>
-</div>
-</main>
-<!-- Bottom Action Area -->
-<footer class="p-4 pb-8 bg-white dark:bg-[#1c140d] border-t border-gray-200 dark:border-gray-800">
-<button class="w-full bg-primary hover:bg-orange-600 text-white font-bold py-4 rounded-xl shadow-lg transition-colors flex items-center justify-center gap-2">
-<span>إتمام الشراء</span>
-<span class="material-symbols-outlined">shopping_cart_checkout</span>
-</button>
-<div class="mt-4 flex justify-center items-center gap-2 opacity-50 text-xs">
-<span class="material-symbols-outlined text-sm">lock</span>
-<span>دفع آمن ومحمي بالكامل</span>
-</div>
-</footer>
-</body></html>
+  <body class="text-slate-100">
+    <div class="min-h-screen grid grid-cols-1 lg:grid-cols-[250px_1fr]">
+      <aside class="bg-side border-l border-stroke p-5 hidden lg:block">
+        <div class="flex items-center gap-2 mb-8"><span class="material-symbols-outlined text-primary">blur_on</span><h1 class="text-3xl font-extrabold">xintra</h1></div>
+        <p class="text-xs text-muted mb-3">تطبيقات الويب</p>
+        <div class="space-y-1 text-sm">
+          <a class="flex items-center gap-2 px-3 py-2 rounded-lg text-slate-300 hover:bg-white/5" href="#"><span class="material-symbols-outlined text-base">add_box</span>إضافة منتج</a>
+          <a class="flex items-center gap-2 px-3 py-2 rounded-lg text-slate-300 hover:bg-white/5" href="#"><span class="material-symbols-outlined text-base">receipt_long</span>تفاصيل الطلب</a>
+          <a class="flex items-center gap-2 px-3 py-2 rounded-lg bg-primary/20 text-primary" href="#"><span class="material-symbols-outlined text-base">orders</span>الطلبات</a>
+          <a class="flex items-center gap-2 px-3 py-2 rounded-lg text-slate-300 hover:bg-white/5" href="#"><span class="material-symbols-outlined text-base">payments</span>الدفع</a>
+        </div>
+      </aside>
+
+      <div class="flex flex-col min-w-0">
+        <header class="bg-nav border-b border-stroke px-4 md:px-6 py-3 flex items-center justify-between gap-3">
+          <div class="flex items-center gap-3 flex-1">
+            <button class="size-10 rounded-lg border border-stroke grid place-items-center"><span class="material-symbols-outlined">menu</span></button>
+            <div class="relative w-full max-w-lg"><span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-muted text-lg">search</span><input class="field w-full h-11 rounded-lg pr-10 pl-4" placeholder="ابحث عن النتائج..."/></div>
+          </div>
+          <div class="flex gap-2"><button class="size-10 rounded-lg border border-stroke grid place-items-center text-muted"><span class="material-symbols-outlined">notifications</span></button><div class="size-10 rounded-lg bg-primary/30 grid place-items-center"><span class="material-symbols-outlined">person</span></div></div>
+        </header>
+
+        <main class="p-4 md:p-6 lg:p-8">
+          <div class="flex flex-wrap items-center justify-between gap-3 mb-5">
+            <div><p class="text-sm text-muted">التطبيقات ← التجارة الإلكترونية ← الطلبات</p><h2 class="text-4xl font-extrabold">الطلبات</h2></div>
+            <div class="flex gap-2"><button class="px-4 py-2 rounded-lg bg-panel border border-stroke font-bold">تصفية</button><button class="px-4 py-2 rounded-lg bg-primary font-bold">مشاركة</button></div>
+          </div>
+
+          <section class="bg-panel border border-stroke rounded-xl overflow-hidden">
+            <div class="p-4 md:p-5 border-b border-stroke flex flex-wrap items-center gap-3 justify-between">
+              <h3 class="text-3xl font-extrabold">قائمة الطلبات</h3>
+              <div class="flex items-center gap-2 w-full md:w-auto">
+                <button class="h-11 px-4 rounded-lg border border-stroke bg-[#141827] text-sm font-bold">فرز حسب</button>
+                <div class="relative flex-1 md:flex-none md:w-72"><input class="field h-11 w-full rounded-lg pr-10 pl-3" placeholder="ابحث في الطلبات..."/><span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-muted text-base">search</span></div>
+              </div>
+            </div>
+
+            <div class="overflow-x-auto">
+              <table class="w-full min-w-[980px] text-lg">
+                <thead class="text-muted bg-[#0f131d]">
+                  <tr>
+                    <th class="text-right p-4">رقم الطلب</th>
+                    <th class="text-right p-4">المنتج</th>
+                    <th class="text-right p-4">العميل</th>
+                    <th class="text-right p-4">الجوال</th>
+                    <th class="text-right p-4">تاريخ الطلب</th>
+                    <th class="text-right p-4">الحالة</th>
+                    <th class="text-right p-4">طريقة الدفع</th>
+                    <th class="text-right p-4">التكلفة</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-stroke">
+                  <tr><td class="p-4">#1172553</td><td class="p-4 font-bold">حذاء خفيف</td><td class="p-4">Violeta Tilly</td><td class="p-4">(222) 111-57840</td><td class="p-4">11 Jan 2024</td><td class="p-4"><span class="px-2 py-1 rounded bg-success/20 text-success text-sm">تم الشحن</span></td><td class="p-4">الدفع عند الاستلام</td><td class="p-4">$177.00</td></tr>
+                  <tr><td class="p-4">#1172555</td><td class="p-4 font-bold">فستان أطفال</td><td class="p-4">Danny Raj</td><td class="p-4">(222) 687-9954</td><td class="p-4">23 Jan 2024</td><td class="p-4"><span class="px-2 py-1 rounded bg-warning/20 text-warning text-sm">معلّق</span></td><td class="p-4">دفع إلكتروني</td><td class="p-4">$153.00</td></tr>
+                  <tr><td class="p-4">#1202513</td><td class="p-4 font-bold">حقيبة نسائية</td><td class="p-4">Sissera William</td><td class="p-4">(222) 987-1323</td><td class="p-4">19 Feb 2024</td><td class="p-4"><span class="px-2 py-1 rounded bg-success/20 text-success text-sm">تم الشحن</span></td><td class="p-4">الدفع عند الاستلام</td><td class="p-4">$203.00</td></tr>
+                  <tr><td class="p-4">#1202510</td><td class="p-4 font-bold">أصيص أنيق</td><td class="p-4">Red Stark</td><td class="p-4">(222) 447-4518</td><td class="p-4">06 Mar 2024</td><td class="p-4"><span class="px-2 py-1 rounded bg-danger/20 text-danger text-sm">ملغي</span></td><td class="p-4">دفع إلكتروني</td><td class="p-4">$211.00</td></tr>
+                  <tr><td class="p-4">#1222516</td><td class="p-4 font-bold">نظارة عصرية</td><td class="p-4">Henry Milo</td><td class="p-4">(222) 666-8080</td><td class="p-4">18 Mar 2024</td><td class="p-4"><span class="px-2 py-1 rounded bg-success/20 text-success text-sm">تم الشحن</span></td><td class="p-4">الدفع عند الاستلام</td><td class="p-4">$265.00</td></tr>
+                  <tr><td class="p-4">#1202513</td><td class="p-4 font-bold">كرسي مودرن</td><td class="p-4">Sissera William</td><td class="p-4">(222) 144-1423</td><td class="p-4">19 Feb 2024</td><td class="p-4"><span class="px-2 py-1 rounded bg-success/20 text-success text-sm">تم الشحن</span></td><td class="p-4">الدفع عند الاستلام</td><td class="p-4">$203.00</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="p-4 md:p-5 border-t border-stroke flex flex-wrap items-center justify-between gap-3 text-lg">
+              <p>عرض 1 إلى 10 نتائج</p>
+              <div class="inline-flex rounded-lg overflow-hidden border border-stroke">
+                <button class="px-4 h-10 bg-[#141827]">السابق</button>
+                <button class="px-4 h-10 bg-primary">1</button>
+                <button class="px-4 h-10 bg-[#141827]">2</button>
+                <button class="px-4 h-10 bg-[#141827]">3</button>
+                <button class="px-4 h-10 bg-[#141827]">التالي</button>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <footer class="px-4 py-5 border-t border-stroke text-center text-muted">© 2025 Xintra. صفحة الطلبات بالعربية.</footer>
+      </div>
+    </div>
+  </body>
+</html>

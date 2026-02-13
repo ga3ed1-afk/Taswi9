@@ -1,126 +1,112 @@
 <!DOCTYPE html>
-
-<html class="light" dir="rtl" lang="ar"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#f27f0d",
-                        "background-light": "#fcfaf8",
-                        "background-dark": "#221910",
-                    },
-                    fontFamily: {
-                        "display": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"]
-                    },
-                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
-                },
+<html lang="ar" dir="rtl" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تفاصيل المنتج | Xintra</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,500,0,0" />
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              side:'#0f1118', nav:'#12141c', panel:'#11141d', stroke:'#2b3040', muted:'#99a2b4',
+              primary:'#6568f6', pink:'#e34fc5', success:'#11d7a5'
             },
+            fontFamily: { sans: ['Tajawal', 'sans-serif'] }
+          }
         }
+      }
     </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
+    <style>
+      body{font-family:'Tajawal',sans-serif;background:#1b1e28}
+      .field{background:#0f131c;border:1px solid #2b3040;color:#e8ebf5}
+      .field:focus{outline:none;border-color:#6568f6;box-shadow:0 0 0 1px #6568f6}
+      .card{background:#11141d;border:1px solid #2b3040}
+      .tag{font-size:11px;padding:3px 8px;border-radius:6px;font-weight:700}
     </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
   </head>
-<body class="bg-background-light dark:bg-background-dark font-display text-[#1c140d] dark:text-[#fcfaf8] antialiased">
-<div class="relative flex h-auto min-h-screen w-full flex-col max-w-[480px] mx-auto overflow-x-hidden">
-<!-- TopAppBar -->
-<header class="sticky top-0 z-20 flex items-center bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md p-4 pb-2 justify-between border-b border-gray-100 dark:border-gray-800">
-<div class="text-[#1c140d] dark:text-[#fcfaf8] flex size-12 shrink-0 items-center justify-start cursor-pointer">
-<span class="material-symbols-outlined">arrow_forward_ios</span>
-</div>
-<h2 class="text-[#1c140d] dark:text-[#fcfaf8] text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">تفاصيل المنتج</h2>
-<div class="flex w-12 items-center justify-end">
-<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 bg-transparent text-[#1c140d] dark:text-[#fcfaf8] gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0">
-<span class="material-symbols-outlined">share</span>
-</button>
-</div>
-</header>
-<main class="flex-1 pb-32">
-<!-- HeaderImage with Sale Badge -->
-<div class="@container relative">
-<div class="@[480px]:px-4 @[480px]:py-3">
-<div class="w-full bg-center bg-no-repeat bg-cover flex flex-col justify-start items-start overflow-hidden bg-[#fcfaf8] @[480px]:rounded-lg min-h-96 relative" data-alt="Modern premium smart watch on a minimalist display stand" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD96YQ8VJOSD9ZTPpK6Fcd48_X7MKFjmvJrEFxkTj19_QW-gjitMSzjoB6fQV_wGT9T91BJ0I8wE6lYnOdXij4JWAi2EpXv43aGdR1tJE7IViw3ZvP3XDPEE6gtrOdBNv9Zaw40hkohxC6CCMhTNz5rXwktrDv6Ui_mszIrKOL3m5iiA24FoL6xwGQK4ox5ZUM3ILpJAlZfLbi2C7Z5I7FTDYc8djPeme9pgIptu5uUpczungsJNIOW7JIBuZ-OmmrtJ5U8qG8Le2LN");'>
-<!-- Sale Badge -->
-<div class="m-4 bg-primary text-white px-4 py-1.5 rounded-full text-sm font-bold shadow-lg">
-                            خصم ٢٠٪
-                        </div>
-</div>
-</div>
-</div>
-<!-- Chips / Categories -->
-<div class="flex gap-3 p-3 flex-wrap pr-4 mt-2">
-<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-primary/10 pl-2 pr-4">
-<span class="material-symbols-outlined text-primary text-[20px]">verified</span>
-<p class="text-primary text-sm font-medium leading-normal">أصلي ١٠٠٪</p>
-</div>
-<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#f4ede7] dark:bg-gray-800 pl-2 pr-4">
-<span class="material-symbols-outlined text-[#1c140d] dark:text-gray-200 text-[20px]">local_fire_department</span>
-<p class="text-[#1c140d] dark:text-gray-200 text-sm font-medium leading-normal">الأكثر مبيعاً</p>
-</div>
-</div>
-<!-- HeadlineText & Price -->
-<div class="px-4 pt-4">
-<h1 class="text-[#1c140d] dark:text-[#fcfaf8] tracking-tight text-2xl font-bold leading-tight text-right">ساعة موجة الذكية - الإصدار الرياضي الفاخر</h1>
-<div class="flex items-center gap-3 mt-3">
-<span class="text-primary text-3xl font-extrabold leading-tight tracking-[-0.015em]">٤٩٩ ر.س</span>
-<span class="text-gray-400 line-through text-lg font-medium">٦٥٠ ر.س</span>
-</div>
-</div>
-<!-- Shipping Info Section (Mouja Express) -->
-<div class="mx-4 mt-6 p-4 rounded-xl border border-primary/20 bg-primary/5 dark:bg-primary/10">
-<div class="flex items-center gap-3 mb-3">
-<div class="bg-primary p-2 rounded-lg">
-<span class="material-symbols-outlined text-white">local_shipping</span>
-</div>
-<div>
-<h3 class="text-[#1c140d] dark:text-[#fcfaf8] font-bold text-base">موجة إكسبريس</h3>
-<p class="text-primary text-xs font-medium">توصيل سريع ومضمون</p>
-</div>
-</div>
-<div class="space-y-2 border-t border-primary/10 pt-3 mt-1">
-<div class="flex items-center gap-2 text-sm text-[#1c140d] dark:text-gray-300">
-<span class="material-symbols-outlined text-[18px]">schedule</span>
-<span>توصيل خلال ٢٤ ساعة داخل الرياض</span>
-</div>
-<div class="flex items-center gap-2 text-sm text-[#1c140d] dark:text-gray-300">
-<span class="material-symbols-outlined text-[18px]">location_on</span>
-<span>شحن لكل مدن المملكة</span>
-</div>
-</div>
-</div>
-<!-- Description -->
-<div class="px-4 mt-8">
-<h3 class="text-[#1c140d] dark:text-[#fcfaf8] text-lg font-bold mb-3">الوصف</h3>
-<p class="text-[#4e3a29] dark:text-gray-400 leading-relaxed text-sm">
-                    ارتقِ بنمط حياتك مع ساعة موجة الذكية. تتميز بشاشة AMOLED فائقة الوضوح، تتبع متقدم للصحة والنشاط البدني، وبطارية تدوم حتى ١٠ أيام. تصميم عصري يناسب المناسبات الرسمية والرياضية على حد سواء. تدعم اللغة العربية بالكامل وإشعارات التطبيقات.
-                </p>
-</div>
-<div class="h-10"></div>
-</main>
-<!-- Sticky Bottom Bar -->
-<footer class="fixed bottom-0 left-0 right-0 max-w-[480px] mx-auto bg-background-light dark:bg-background-dark border-t border-gray-100 dark:border-gray-800 p-4 pb-8 flex items-center gap-4 z-30 shadow-[0_-4px_20px_rgba(0,0,0,0.05)]">
-<button class="flex-1 bg-primary text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 active:scale-95 transition-transform">
-<span>اشتري الآن</span>
-</button>
-<button class="flex-1 bg-primary/10 text-primary font-bold py-4 rounded-xl flex items-center justify-center gap-2 active:scale-95 transition-transform">
-<span class="material-symbols-outlined">shopping_cart</span>
-<span>أضف للسلة</span>
-</button>
-</footer>
-</div>
-</body></html>
+  <body class="text-slate-100">
+    <div class="min-h-screen grid grid-cols-1 lg:grid-cols-[250px_1fr]">
+      <aside class="bg-side border-l border-stroke p-5 hidden lg:block">
+        <div class="flex items-center gap-2 mb-8"><span class="material-symbols-outlined text-primary">blur_on</span><h1 class="text-3xl font-extrabold">xintra</h1></div>
+        <p class="text-xs text-muted mb-3">تطبيقات الويب</p>
+        <div class="space-y-1 text-sm">
+          <a class="flex items-center gap-2 px-3 py-2 rounded-lg text-slate-300 hover:bg-white/5" href="#"><span class="material-symbols-outlined text-base">inventory_2</span>المنتجات</a>
+          <a class="flex items-center gap-2 px-3 py-2 rounded-lg bg-primary/20 text-primary" href="#"><span class="material-symbols-outlined text-base">inventory</span>تفاصيل المنتج</a>
+          <a class="flex items-center gap-2 px-3 py-2 rounded-lg text-slate-300 hover:bg-white/5" href="#"><span class="material-symbols-outlined text-base">orders</span>الطلبات</a>
+        </div>
+      </aside>
+
+      <div class="flex flex-col min-w-0">
+        <header class="bg-nav border-b border-stroke px-4 md:px-6 py-3 flex items-center justify-between gap-3">
+          <div class="flex items-center gap-3 flex-1">
+            <button class="size-10 rounded-lg border border-stroke grid place-items-center"><span class="material-symbols-outlined">menu</span></button>
+            <div class="relative w-full max-w-lg"><span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-muted text-lg">search</span><input class="field w-full h-11 rounded-lg pr-10 pl-4" placeholder="ابحث عن النتائج..."/></div>
+          </div>
+          <div class="flex gap-2"><button class="size-10 rounded-lg border border-stroke grid place-items-center text-muted"><span class="material-symbols-outlined">notifications</span></button><div class="size-10 rounded-lg bg-primary/30 grid place-items-center"><span class="material-symbols-outlined">person</span></div></div>
+        </header>
+
+        <main class="p-4 md:p-6 lg:p-8 space-y-4">
+          <div class="flex flex-wrap items-center justify-between gap-3">
+            <div><p class="text-sm text-muted">التطبيقات ← التجارة الإلكترونية ← تفاصيل المنتج</p><h2 class="text-4xl font-extrabold">تفاصيل المنتج</h2></div>
+            <div class="flex gap-2"><button class="px-4 py-2 rounded-lg bg-panel border border-stroke font-bold">تصفية</button><button class="px-4 py-2 rounded-lg bg-primary font-bold">مشاركة</button></div>
+          </div>
+
+          <section class="card rounded-xl overflow-hidden">
+            <div class="p-3 bg-[#1b2140] relative">
+              <span class="absolute right-4 top-4 px-2 py-1 rounded bg-pink-500 text-xs font-bold">Featured</span>
+              <img class="w-full h-[300px] object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3xyJ7z1mxfY4Q1CGVtED2R6nW3UFTX0BGdfcFQO0hfrnL1mM7j8W6vTg81Gq67FE5m4TjZJk9Kj0hY9WzYyxA2DI4N3s0Q9mM5K6R1jV3zHGhC3VxQJXcK9N0P8LQ8pdtQ0JYFv6-D8fgnj3Nf2kH2w1Vh8wL2Z7MZghL7dEt7tPEJ0D7dg4oB9G5Q4H2y8G6W-jX3p9R7aDFv1lT7" alt="laptop"/>
+            </div>
+            <div class="p-4 flex gap-2 justify-center border-t border-stroke"><button class="px-8 h-11 rounded-lg bg-primary font-bold">شراء الآن</button><button class="px-8 h-11 rounded-lg bg-[#41204f] text-pink-300 font-bold">أضف للسلة</button></div>
+          </section>
+
+          <section class="card rounded-xl p-4">
+            <h3 class="text-3xl font-extrabold leading-tight">TechPro X15 Elite - 2024 Edition Laptop</h3>
+            <p class="mt-2 text-sm text-muted">★★★★★ 4.6 (3.1k تقييم)</p>
+            <div class="mt-2 flex items-center gap-2"><span class="text-4xl font-extrabold">$1,899</span><span class="line-through text-muted">$2,500</span><span class="text-cyan-400 font-bold">وفّر حتى 42%</span></div>
+            <p class="mt-3 text-muted text-sm">جهاز قوي للأعمال والألعاب مع شاشة 4K ولمس، معالج Intel i7، وذاكرة 16GB RAM وقرص SSD سريع.</p>
+            <div class="mt-4 grid md:grid-cols-2 gap-4 text-sm">
+              <div class="flex items-center gap-2"><span class="text-muted">RAM:</span><button class="px-3 py-1 rounded bg-[#1f2433]">8GB</button><button class="px-3 py-1 rounded bg-[#1f2433]">16GB</button></div>
+              <div class="flex items-center gap-2"><span class="text-muted">SSD:</span><button class="px-3 py-1 rounded bg-[#1f2433]">256GB</button><button class="px-3 py-1 rounded bg-[#1f2433]">1TB</button></div>
+            </div>
+            <div class="mt-3 flex flex-wrap gap-2 text-xs"><span class="px-2 py-1 rounded bg-success/20 text-success">In stock</span><span class="px-2 py-1 rounded bg-success/20 text-success">Free Shipping</span><span class="px-2 py-1 rounded bg-success/20 text-success">Easy Return</span></div>
+            <div class="mt-3 flex items-center gap-3"><span class="text-muted">الكمية:</span><button class="size-8 rounded-full bg-primary/20">-</button><span>1</span><button class="size-8 rounded-full bg-primary/20">+</button></div>
+            <div class="mt-3 flex flex-wrap gap-2"><span class="size-4 rounded-full bg-purple-300"></span><span class="size-4 rounded-full bg-pink-300"></span><span class="size-4 rounded-full bg-slate-300"></span><span class="size-4 rounded-full bg-amber-200"></span></div>
+          </section>
+
+          <section class="card rounded-xl p-4">
+            <div class="flex gap-2 mb-3"><button class="px-3 py-1 rounded bg-primary/20 text-primary">تفاصيل المنتج</button><button class="px-3 py-1 rounded bg-[#1f2433]">المواصفات</button><button class="px-3 py-1 rounded bg-[#1f2433]">مزايا إضافية</button></div>
+            <ul class="space-y-2 text-sm text-muted">
+              <li><b class="text-slate-200">الشاشة:</b> 4K UHD Touch.</li>
+              <li><b class="text-slate-200">المعالج:</b> Intel Core i7.</li>
+              <li><b class="text-slate-200">الذاكرة:</b> 16GB DDR4.</li>
+              <li><b class="text-slate-200">التخزين:</b> SSD حتى 1TB.</li>
+              <li><b class="text-slate-200">الرسوميات:</b> NVIDIA GTX 1650 Ti.</li>
+            </ul>
+          </section>
+
+          <section class="card rounded-xl p-4">
+            <div class="flex items-center justify-between mb-3"><h3 class="text-2xl font-extrabold">المراجعات والتقييمات</h3><button class="text-primary text-sm">عرض المزيد</button></div>
+            <div class="bg-[#1f2433] rounded-lg p-4 text-center mb-3"><p class="text-5xl font-extrabold">4.2</p><p class="text-xs text-muted">Based on 23,435 ratings</p><button class="mt-2 w-full h-10 rounded bg-primary">أضف تقييمك</button></div>
+            <div class="border border-stroke rounded-lg p-3 text-sm"><p class="font-bold">Henry Milo <span class="text-muted">• 4.3</span></p><p class="text-muted mt-1">تصميم رائع وشحن سريع جدًا.</p></div>
+          </section>
+
+          <section class="card rounded-xl p-4">
+            <div class="flex items-center justify-between mb-3"><h3 class="text-2xl font-extrabold">منتجات مرتبطة</h3><button class="text-primary text-sm">عرض الكل</button></div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+              <article class="product-card rounded-lg p-2"><div class="bg-[#1b2140] rounded p-2 relative"><span class="tag bg-emerald-500 absolute right-2 top-2">60% خصم</span><img class="w-full h-36 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAe3tS-9Doy3rJv5_LHzo_f8aXaS8y5WkQy2rA5Jjz0P3q9dS4zq2vWb8A8qX_B8o5nK0E6P8oI9N2xQ3kUq6a8J8zjV3M9p7tO4V8iK3u"/></div><p class="font-bold mt-2">سماعات Earbuds</p><div class="flex justify-between"><span>$314</span><button class="size-8 rounded-full bg-primary grid place-items-center"><span class="material-symbols-outlined text-sm">shopping_cart</span></button></div></article>
+              <article class="product-card rounded-lg p-2"><div class="bg-[#1b2140] rounded p-2 relative"><span class="tag bg-blue-500 absolute right-2 top-2">15% خصم</span><img class="w-full h-36 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDV3lYv5uL5M1-Q6bF0i5W5G4J6N9A9m4A7m2X5n0W6Q9s1Q6V4s8T6i2L6c1D9s7f4M3n1Q8p2R6u0T5j3M8Q"/></div><p class="font-bold mt-2">فستان أطفال</p><div class="flex justify-between"><span>$236</span><button class="size-8 rounded-full bg-primary grid place-items-center"><span class="material-symbols-outlined text-sm">shopping_cart</span></button></div></article>
+              <article class="product-card rounded-lg p-2"><div class="bg-[#1b2140] rounded p-2 relative"><span class="tag bg-pink-500 absolute right-2 top-2">24% خصم</span><img class="w-full h-36 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYq618NsyKEUGcTZ0cyhl1YesgiYs6Xg50R7YmDuAx2oimF7l_JWvp6aq2JQfeH2UXKGbdsYq7wjc6zdud4jjqdCz9ce0pXtfH2Ys6TvbWf43cwJnhDa63VXwb5SaLFuo6W6EZWcmb1J4RoT6wLSoD0fPJdPs_K6uM_O2ipIZ2o_Ls7QhkytQpZmU-pa3CBHECHk5AGPBdMje-tY4V0LZwP-mkab9w7uu4IXdtO8Z13BHRUiFwYBDnTsUnpmfWHrZ7memRdZEOX9NE"/></div><p class="font-bold mt-2">حقيبة نسائية</p><div class="flex justify-between"><span>$124</span><button class="size-8 rounded-full bg-primary grid place-items-center"><span class="material-symbols-outlined text-sm">shopping_cart</span></button></div></article>
+            </div>
+          </section>
+        </main>
+
+        <footer class="px-4 py-5 border-t border-stroke text-center text-muted">© 2025 Xintra. صفحة تفاصيل المنتج بالعربية.</footer>
+      </div>
+    </div>
+  </body>
+</html>
